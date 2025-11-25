@@ -1,12 +1,6 @@
+name: Build ZMK firmware
+on: [push, pull_request, workflow_dispatch]
 
-include:
-  - board: akdk_bt1
-    shield: zephyrkey_left
-    snippet: studio-rpc-usb-uart
-    cmake-args: -DCONFIG_ZMK_STUDIO=y
-  - board: akdk_bt1
-    shield: zephyrkey_right
-    snippet: studio-rpc-usb-uart
-    cmake-args: -DCONFIG_ZMK_STUDIO=y
-  - board: akdk_bt1
-    shield: settings_reset
+jobs:
+  build:
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
