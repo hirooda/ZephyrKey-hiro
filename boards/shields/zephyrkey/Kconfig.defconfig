@@ -1,0 +1,14 @@
+
+if SHIELD_ZEPHYRKEY_RIGHT
+
+config ZMK_KEYBOARD_NAME
+    default "zephyrkey"
+
+endif
+
+if SHIELD_ZEPHYRKEY_LEFT || SHIELD_ZEPHYRKEY_RIGHT
+
+config ZMK_SPLIT
+    default y
+
+endif

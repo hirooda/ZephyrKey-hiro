@@ -1,0 +1,4 @@
+config SHIELD_ZEPHYRKEY_LEFT
+    def_bool $(shields_list_contains,zephyrkey_left)
+config SHIELD_ZEPHYRKEY_RIGHT
+    def_bool $(shields_list_contains,zephyrkey_right)
